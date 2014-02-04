@@ -13,23 +13,32 @@ namespace gestionnaireVisuel
 
         protected override void OnGotFocus(EventArgs e)
         {
+            base.OnGotFocus(e);
+
             if (this.Text == "")
-            {
-                this.Text = this.filigrane;
-            }
-            else
             {
                 this.Text = "";
             }
+            else
+            {
+               
+            }
 
-            base.OnGotFocus(e);
+           
             
             
         }
 
         protected override void OnLostFocus(EventArgs e)
         {
+
             base.OnLostFocus(e);
+
+            if (this.Text == "")
+            {
+                this.Text = filigrane;
+            }
+
         }
     }
 }

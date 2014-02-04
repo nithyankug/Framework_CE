@@ -12,27 +12,15 @@ using System.Windows.Forms;
 namespace gestionnaireVisuel
 {
 
-<<<<<<< HEAD:Lab3/gestionnaireVisuel/gestionnaireVisuel/mainForm.cs
     public partial class mainForm : Form
     {
-        private List<Student> myStudents;
-
+         private List<String> _list;
         public mainForm()
         {
-            InitializeComponent();
-            myStudents = new List<Student>();
-=======
-    public partial class Form1 : Form
-    {
-
-        private List<String> _list;
-
-        public Form1()
-        {
+    
             InitializeComponent();
             _list = new List<string>();
->>>>>>> ListView works:Lab3/gestionnaireVisuel/gestionnaireVisuel/Form1.cs
-            myDisplay();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,20 +28,15 @@ namespace gestionnaireVisuel
             
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void Form1_Load(object sender, EventArgs e){
+         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void myDisplay()
-        {
+    typingWindow addStudent = new typingWindow();
+     //   {
             // Variable declaration
-           
+ // addStudent .         
 
 
         }
@@ -75,28 +58,20 @@ namespace gestionnaireVisuel
 
         private void button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            typpingWindow addStudent = new typpingWindow();
+
             String str;
-=======
             typingWindow addStudent = new typingWindow();
->>>>>>> update
+
 
             addStudent.ShowDialog();
 
-            
-<<<<<<< HEAD:Lab3/gestionnaireVisuel/gestionnaireVisuel/mainForm.cs
-            
-
-=======
             str = addStudent.StudentName + "  -  " + addStudent.StudentGrade;
             _list.Add(str);
             //listView1.Items.Add(str);
             refreshListView();
->>>>>>> ListView works:Lab3/gestionnaireVisuel/gestionnaireVisuel/Form1.cs
         }
+   
     }
-
 
 
 }

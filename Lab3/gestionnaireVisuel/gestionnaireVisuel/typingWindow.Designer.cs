@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.typingArea1 = new gestionnaireVisuel.typingArea();
-            this.typingArea2 = new gestionnaireVisuel.typingArea();
+            this.name = new gestionnaireVisuel.typingArea();
+            this.mark = new gestionnaireVisuel.typingArea();
             this.SuspendLayout();
             // 
             // button1
@@ -43,31 +43,33 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // typingArea1
+            // name
             // 
-            this.typingArea1.Location = new System.Drawing.Point(12, 22);
-            this.typingArea1.Name = "typingArea1";
-            this.typingArea1.Size = new System.Drawing.Size(323, 31);
-            this.typingArea1.TabIndex = 8;
-            this.typingArea1.Load += new System.EventHandler(this.typingArea1_Load);
+            this.name.Location = new System.Drawing.Point(12, 22);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(323, 31);
+            this.name.TabIndex = 8;
+            this.name.Load += new System.EventHandler(this.typingArea1_Load);
             // 
-            // typingArea2
+            // mark
             // 
-            this.typingArea2.Location = new System.Drawing.Point(12, 59);
-            this.typingArea2.Name = "typingArea2";
-            this.typingArea2.Size = new System.Drawing.Size(323, 31);
-            this.typingArea2.TabIndex = 9;
+            this.mark.Location = new System.Drawing.Point(12, 59);
+            this.mark.Name = "mark";
+            this.mark.Size = new System.Drawing.Size(323, 31);
+            this.mark.TabIndex = 9;
+            this.mark.Load += new System.EventHandler(this.typingArea2_Load);
             // 
-            // typpingWindow
+            // typingWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 154);
-            this.Controls.Add(this.typingArea2);
-            this.Controls.Add(this.typingArea1);
+            this.Controls.Add(this.mark);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.button1);
-            this.Name = "typpingWindow";
+            this.Name = "typingWindow";
             this.Text = "typpingWindow";
+            this.Load += new System.EventHandler(this.typingWindow_Load);
             this.ResumeLayout(false);
 
         }
@@ -75,7 +77,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private typingArea typingArea1;
-        private typingArea typingArea2;
+        private typingArea name;
+        private typingArea mark;
     }
 }

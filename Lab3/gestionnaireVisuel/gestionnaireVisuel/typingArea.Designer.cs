@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.fieldName = new System.Windows.Forms.Label();
-            this.myTextbox1 = new gestionnaireVisuel.myTextbox();
+            this.myTypingField = new gestionnaireVisuel.myTextbox();
             this.SuspendLayout();
             // 
             // fieldName
@@ -40,20 +40,21 @@
             this.fieldName.Size = new System.Drawing.Size(54, 13);
             this.fieldName.TabIndex = 0;
             this.fieldName.Text = "fieldName";
-            this.fieldName.Click += new System.EventHandler(this.label1_Click);
+            this.fieldName.Click += new System.EventHandler(this.fieldName_Click);
             // 
-            // myTextbox1
+            // myTypingField
             // 
-            this.myTextbox1.Location = new System.Drawing.Point(81, 3);
-            this.myTextbox1.Name = "myTextbox1";
-            this.myTextbox1.Size = new System.Drawing.Size(224, 20);
-            this.myTextbox1.TabIndex = 1;
+            this.myTypingField.Location = new System.Drawing.Point(81, 3);
+            this.myTypingField.Name = "myTypingField";
+            this.myTypingField.Size = new System.Drawing.Size(224, 20);
+            this.myTypingField.TabIndex = 1;
+            this.myTypingField.TextChanged += new System.EventHandler(this.myTypingField_TextChanged);
             // 
             // typingArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.myTextbox1);
+            this.Controls.Add(this.myTypingField);
             this.Controls.Add(this.fieldName);
             this.Name = "typingArea";
             this.Size = new System.Drawing.Size(323, 31);
@@ -65,6 +66,6 @@
         #endregion
 
         private System.Windows.Forms.Label fieldName;
-        private myTextbox myTextbox1;
+        private myTextbox myTypingField;
     }
 }

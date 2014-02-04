@@ -15,17 +15,40 @@ namespace gestionnaireVisuel
         public typingArea()
         {
             InitializeComponent();
+            this.myTypingField.Text  = "Click here to type";
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void setField(String nameToSet)
+        public void setFieldLabel(String nameToSet)
         {
             this.fieldName.Text = nameToSet;
         }
+
+       /* public void setNameTextBox(String nameToSet)
+        {
+            this.myTypingField.Name = nameToSet;
+        }
+        */
+
+        private void fieldName_Click(object h,EventArgs e)
+        {
+        }
+
+        private void myTypingField_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public String getTypedField()
+        {
+            return this.myTypingField.Text;
+        }
+
+
+        public void setHintTextBox(String msgToSet)
+        {
+            this.myTypingField.Text  = msgToSet;
+        }
+        
 
         
     }

@@ -12,42 +12,32 @@ namespace gestionnaireVisuel
 {
     public partial class typingWindow : Form
     {
-<<<<<<< HEAD
-        private float mark;
-=======
 
-        public String StudentName { get; private set; }
+   
+   public String StudentName { get; private set; }
         public String StudentGrade { get; private set; }
->>>>>>> ListView works
+
 
         public typingWindow()
         {
             InitializeComponent();
            
-            button1.Enabled = false;
+            button1.Enabled = true;
         }
 
         public void button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            // FIXME if( (this.textBox3 .Text)  !="")
-  
-=======
-            StudentGrade = MarkTbx.Text;
-            StudentName = nameTbx.Text;
 
->>>>>>> ListView works
+            StudentGrade =this.mark.getTypedField ()  ;
+            StudentName = this.name.getTypedField();
+
             this.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e) 
         {
-<<<<<<< HEAD:Lab3/gestionnaireVisuel/gestionnaireVisuel/typpingWindow.cs
-            button1.Enabled = ((this.nameTbx.Text != ""));
-=======
-           // button1.Enabled = ((this.textBox1.Text != ""));
-            
->>>>>>> update:Lab3/gestionnaireVisuel/gestionnaireVisuel/typingWindow.cs
+       
+   
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -58,6 +48,16 @@ namespace gestionnaireVisuel
         private void typingArea1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void typingArea2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void typingWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
