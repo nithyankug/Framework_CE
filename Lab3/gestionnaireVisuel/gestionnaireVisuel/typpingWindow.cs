@@ -12,7 +12,13 @@ namespace gestionnaireVisuel
 {
     public partial class typpingWindow : Form
     {
+<<<<<<< HEAD
         private float mark;
+=======
+
+        public String StudentName { get; private set; }
+        public String StudentGrade { get; private set; }
+>>>>>>> ListView works
 
         public typpingWindow()
         {
@@ -23,14 +29,20 @@ namespace gestionnaireVisuel
 
         public void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             // FIXME if( (this.textBox3 .Text)  !="")
   
+=======
+            StudentGrade = MarkTbx.Text;
+            StudentName = nameTbx.Text;
+
+>>>>>>> ListView works
             this.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e) 
         {
-            button1.Enabled = ((this.textBox1.Text != ""));
+            button1.Enabled = ((this.nameTbx.Text != ""));
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)

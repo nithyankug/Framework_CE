@@ -11,8 +11,8 @@ using System.Windows.Forms;
 
 namespace gestionnaireVisuel
 {
-    
 
+<<<<<<< HEAD:Lab3/gestionnaireVisuel/gestionnaireVisuel/mainForm.cs
     public partial class mainForm : Form
     {
         private List<Student> myStudents;
@@ -21,6 +21,17 @@ namespace gestionnaireVisuel
         {
             InitializeComponent();
             myStudents = new List<Student>();
+=======
+    public partial class Form1 : Form
+    {
+
+        private List<String> _list;
+
+        public Form1()
+        {
+            InitializeComponent();
+            _list = new List<string>();
+>>>>>>> ListView works:Lab3/gestionnaireVisuel/gestionnaireVisuel/Form1.cs
             myDisplay();
         }
 
@@ -53,15 +64,32 @@ namespace gestionnaireVisuel
             
         }
 
+        private void refreshListView()
+        {
+            listView1.Clear();
+            foreach (String s in _list)
+            {
+                listView1.Items.Add(s);
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             typpingWindow addStudent = new typpingWindow();
+            String str;
 
             addStudent.ShowDialog();
 
             
+<<<<<<< HEAD:Lab3/gestionnaireVisuel/gestionnaireVisuel/mainForm.cs
             
 
+=======
+            str = addStudent.StudentName + "  -  " + addStudent.StudentGrade;
+            _list.Add(str);
+            //listView1.Items.Add(str);
+            refreshListView();
+>>>>>>> ListView works:Lab3/gestionnaireVisuel/gestionnaireVisuel/Form1.cs
         }
     }
 
