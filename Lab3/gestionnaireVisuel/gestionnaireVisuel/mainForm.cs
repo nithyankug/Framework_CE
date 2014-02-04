@@ -13,11 +13,14 @@ namespace gestionnaireVisuel
 {
     
 
-    public partial class Form1 : Form
-    {   
-        public Form1()
+    public partial class mainForm : Form
+    {
+        private List<Student> myStudents;
+
+        public mainForm()
         {
             InitializeComponent();
+            myStudents = new List<Student>();
             myDisplay();
         }
 
@@ -47,7 +50,7 @@ namespace gestionnaireVisuel
         
         private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,6 +58,9 @@ namespace gestionnaireVisuel
             typpingWindow addStudent = new typpingWindow();
 
             addStudent.ShowDialog();
+
+            
+            
 
         }
     }

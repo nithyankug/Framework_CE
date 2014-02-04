@@ -1,6 +1,6 @@
 ﻿namespace gestionnaireVisuel
 {
-    partial class Form1
+    partial class mainForm
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

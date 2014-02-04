@@ -12,15 +12,20 @@ namespace gestionnaireVisuel
 {
     public partial class typpingWindow : Form
     {
+        private float mark;
+
         public typpingWindow()
         {
             InitializeComponent();
+           
             button1.Enabled = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
-
+            // FIXME if( (this.textBox3 .Text)  !="")
+  
+            this.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e) 
@@ -30,7 +35,7 @@ namespace gestionnaireVisuel
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
