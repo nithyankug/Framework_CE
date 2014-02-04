@@ -75,8 +75,12 @@ namespace gestionnaireVisuel
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             typpingWindow addStudent = new typpingWindow();
             String str;
+=======
+            typingWindow addStudent = new typingWindow();
+>>>>>>> update
 
             addStudent.ShowDialog();
 

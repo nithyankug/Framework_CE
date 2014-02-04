@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace gestionnaireVisuel
 {
-    public partial class typpingWindow : Form
+    public partial class typingWindow : Form
     {
 <<<<<<< HEAD
         private float mark;
@@ -20,7 +20,7 @@ namespace gestionnaireVisuel
         public String StudentGrade { get; private set; }
 >>>>>>> ListView works
 
-        public typpingWindow()
+        public typingWindow()
         {
             InitializeComponent();
            
@@ -42,10 +42,20 @@ namespace gestionnaireVisuel
 
         private void textBox1_TextChanged(object sender, EventArgs e) 
         {
+<<<<<<< HEAD:Lab3/gestionnaireVisuel/gestionnaireVisuel/typpingWindow.cs
             button1.Enabled = ((this.nameTbx.Text != ""));
+=======
+           // button1.Enabled = ((this.textBox1.Text != ""));
+            
+>>>>>>> update:Lab3/gestionnaireVisuel/gestionnaireVisuel/typingWindow.cs
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void typingArea1_Load(object sender, EventArgs e)
         {
             
         }
