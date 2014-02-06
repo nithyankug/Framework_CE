@@ -44,7 +44,7 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
-            //this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_2);
             // 
             // button1
             // 
@@ -56,14 +56,14 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(417, 346);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
-            this.Name = "Form1";
+            this.Name = "mainForm";
             this.Text = "List students";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

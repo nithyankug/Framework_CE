@@ -14,40 +14,43 @@ namespace gestionnaireVisuel
     {
 
    
-   public String StudentName { get; private set; }
+        public String StudentName { get; private set; }
         public String StudentGrade { get; private set; }
-
+        public bool validTyping { get; private set; } 
 
         public typingWindow()
         {
             InitializeComponent();
            
-            button1.Enabled = true;
+            insertButton.Enabled = true;
         }
 
         public void button1_Click(object sender, EventArgs e)
         {
+            String recupName = this.name.getTypedField();
+            double recupMark=-1;
+            bool validMark = double.TryParse(this.mark.getTypedField(),out recupMark);
 
-            StudentGrade =this.mark.getTypedField ()  ;
-            StudentName = this.name.getTypedField();
+            if ((recupMark <= 20) && (recupMark >= 0) && (recupName != "") && (validMark) && (recupName != "Click here to type"))
+            {
+                StudentGrade = this.mark.getTypedField();
+                StudentName = this.name.getTypedField();
+                validTyping = true;
+                this.Close();
+            }
 
-            this.Close();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e) 
-        {
-       
-   
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
+            else
+            {
+                MessageBox.Show("Invalid name or mark, try again please ...");
+            }
             
         }
+
+       
 
         private void typingArea1_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void typingArea2_Load(object sender, EventArgs e)
@@ -57,7 +60,8 @@ namespace gestionnaireVisuel
 
         private void typingWindow_Load(object sender, EventArgs e)
         {
-
+            this.name.setFieldLabel("Name");
+            this.mark.setFieldLabel("Mark");
         }
     }
 }

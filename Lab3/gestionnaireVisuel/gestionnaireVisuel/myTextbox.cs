@@ -15,17 +15,13 @@ namespace gestionnaireVisuel
         {
             base.OnGotFocus(e);
 
-            if (this.Text == "")
+            if (this.Text == "Click here to type")
             {
                 this.Text = "";
             }
-            else
-            {
-               
-            }
-
-           
             
+           
+
             
         }
 
